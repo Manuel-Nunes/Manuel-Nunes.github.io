@@ -6,34 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<script>
-    function btnClick(){
-        fetch("https://github.com/login/oauth/authorize",
-        {
-            'method':"GET",
-        
-        }).then(function(data){
-            alert(data);
-        })
-        // const xhr = new XMLHttpRequest();
-        // const url = "https://github.com/login/oauth/authorize";
-
-        // xhr.open("GET", url);
-        // xhr.setRequestHeader( "Content-Type", "text/xml");
-        // xhr.setRequestHeader( "client_id", "1c97f106b422ceb10c61");
-        // xhr.onreadystatechange = function() {
-        //     alert("Something Happened")
-        // };
-        // xhr.send();
+<style>
+    *{
+        margin: 0;
+        padding: 0;
     }
-</script>
+    body{
+        background-color: #232323;
+        color: white;
+    }
+</style>
 <body>
-    <form action="https://github.com/login/oauth/authorize" method="get" >
-        <button type="submit">Click me</button>
-    </form>
-    <h1>Hello World</h1>
-    <p>Hi</p>
-    <p>Version 1.2</p>
-    <button onclick="btnClick()">CLick me</button>
+    <!-- <button onclick="">Login with Github</button> -->
+    <div>
+        <h1>Log in with:</h1>
+        <img src="https://allvectorlogo.com/img/2021/12/github-logo-vector.png" alt="" width="100px" onclick="githubLogin()">
+    </div>
+    <button onclick="getLoginInfo()">Show Login Info</button>
 </body>
+<script
+  src="https://code.jquery.com/jquery-3.6.3.js"
+  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+  crossorigin="anonymous" defer></script>
+<script src="scripts.js" defer></script>
 </html>
