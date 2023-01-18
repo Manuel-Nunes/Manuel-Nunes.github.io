@@ -8,23 +8,23 @@
 </head>
 <script>
     function btnClick(){
-        // fetch("https://github.com/login/oauth/authorize",
-        // {
-        //     'method':"GET",
+        fetch("https://github.com/login/oauth/authorize",
+        {
+            'method':"GET",
         
-        // }).then(function(data){
-        //     alert(data);
-        // })
-        const xhr = new XMLHttpRequest();
-        const url = "https://github.com/login/oauth/authorize";
+        }).then(function(data){
+            alert(data);
+        })
+        // const xhr = new XMLHttpRequest();
+        // const url = "https://github.com/login/oauth/authorize";
 
-        xhr.open("GET", url);
-        xhr.setRequestHeader( "Content-Type", "text/xml");
-        xhr.setRequestHeader( "client_id", "1c97f106b422ceb10c61");
-        xhr.onreadystatechange = function() {
-            alert("Something Happened")
-        };
-        xhr.send();
+        // xhr.open("GET", url);
+        // xhr.setRequestHeader( "Content-Type", "text/xml");
+        // xhr.setRequestHeader( "client_id", "1c97f106b422ceb10c61");
+        // xhr.onreadystatechange = function() {
+        //     alert("Something Happened")
+        // };
+        // xhr.send();
     }
 </script>
 <body>
