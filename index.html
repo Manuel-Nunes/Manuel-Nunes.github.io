@@ -20,12 +20,11 @@
 
         xhr.open("GET", url);
         xhr.setRequestHeader( "Content-Type", "text/xml");
-        xhr.setRequestHeader( "Origin", "localhost");
+        xhr.setRequestHeader( "client_id", "1c97f106b422ceb10c61");
         xhr.onreadystatechange = function() {
             alert("Something Happened")
         };
         xhr.send();
-        console.log(xhr.getAllResponseHeaders())
     }
 </script>
 <body>
