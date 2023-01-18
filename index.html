@@ -6,8 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script>
+    function btnClick(){
+        // fetch("https://github.com/login/oauth/authorize",
+        // {
+        //     method:"GET",
+        //     mode: 'cors',
+        //     headers:{
+        //         'Origin':'https://github.com/',
+        //         'Accept':'JSON',
+        //         'client_id':'b82119c824f134a222fe',
+        //         'Access-Control-Allow-Origin':'*',
+                
+        //     }
+        // }).then(function(data){
+        //     alert(data);
+        // })
+        const xhr = new XMLHttpRequest();
+        const url = "https://github.com/login/oauth/authorize";
+
+        xhr.open("GET", url);
+        xhr.setRequestHeader( "Content-Type", "text/xml");
+        xhr.setRequestHeader( "Origin", "localhost");
+        xhr.onreadystatechange = function() {
+            alert("Something Happened")
+        };
+        console.log(xhr);
+        xhr.send();
+    }
+</script>
 <body>
     <h1>Hello World</h1>
     <p>Hi</p>
+    <button onclick="btnClick()">CLick me</button>
 </body>
 </html>
