@@ -31,8 +31,8 @@
         xhr.onreadystatechange = function() {
             alert("Something Happened")
         };
-        console.log(xhr);
         xhr.send();
+        console.log(xhr.getAllResponseHeaders())
     }
 </script>
 <body>
