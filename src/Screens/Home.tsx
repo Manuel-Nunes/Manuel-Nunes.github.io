@@ -1,13 +1,14 @@
-import { ContainerFCC, CustomImage } from 'SharedComp';
+import { ContainerFCC, CustomImage, NavBar } from 'Components';
 import styled from 'styled-components';
 
-import ProfilePic from '../assets/ProfilePic.jpg';
+import ProfilePic from '../assets/ProfilePic.png';
 
 const BigDiv = styled.div`
   display: flex;
   flex-direction: column;
   background-color: var(--profileCardColor);
-  height: 45rem;
+  /* height: 45rem; */
+  height: 80vh;
   width: 25rem ;
   border-radius: 0 0 15rem 0;
   overflow: hidden;
@@ -18,15 +19,19 @@ const BigDiv = styled.div`
 
 const InfoWrapper = styled.div`
   background-color: var(--infoBlockColor);
-  height: 45rem;
+  /* height: 45rem; */
+  height: 80vh;
   /* height: 48rem; */
   width: 28rem;
   left: 0;
   position: absolute;
   z-index: 0;
   border-radius: 0 0 15rem 0;
-  /* border-radius: 0 0 18rem 0; */
+  border-radius: 0 0 15rem 0;
+  /* border-radius: 0 0 300px 0; */
 
+  box-sizing: border-box;
+  padding: 0 5rem 0 0;
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -54,6 +59,7 @@ export function Home(){
         <h1>Manuel A Nunes</h1>
       </BigDiv>
       <InfoWrapper>
+        <NavBar />
       </InfoWrapper>
     </Wrapper>
   );
