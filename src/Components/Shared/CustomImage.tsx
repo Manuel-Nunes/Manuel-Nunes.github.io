@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 interface styledImageProps {
-  $width?: string
-  $height?: string
-  $src?: string
-  $margin?: string
-  $padding?: string
+  $width?       : string
+  $height?      : string
+  $src?         : string
+  $margin?      : string
+  $padding?     : string
+  $size?        : string
+  $bordeRaduis? : string
 }
 
 export const CustomImage = styled.div<styledImageProps>`
@@ -15,13 +17,18 @@ export const CustomImage = styled.div<styledImageProps>`
       $src,
       $width,
       $margin,
-      $padding
+      $padding,
+      $bordeRaduis,
+      $size
     }) => `
-      ${ $height && `height: ${ $height }; `}
-      ${ $src && `background-image: url(${ $src }); `}
-      ${ $width && `width: ${ $width }; `}
-      ${ $margin && `margin: ${ $margin }; `}
-      ${ $padding && `padding: ${ $padding }; `}
+      ${ $src              && `background-image: url(${ $src }); ` }
+      ${ $height && !$size && `height: ${ $height }; ` }
+      ${ $width  && !$size && `width: ${ $width }; ` }
+      ${ $margin           && `margin: ${ $margin }; ` }
+      ${ $padding          && `padding: ${ $padding }; ` }
+      ${ $size             && `width: ${ $size }; ` }
+      ${ $size             && `height: ${ $size }; ` }
+      ${ $bordeRaduis      && `border-radius: ${ $bordeRaduis }; ` }
     `
   }
   background-position: center;
@@ -29,21 +36,13 @@ export const CustomImage = styled.div<styledImageProps>`
 `;
 
 CustomImage.defaultProps = {
-  $height : '100%',
-  $width: '100%',
+  $height : '',
+  $width: '',
   $src: '',
   $margin: '',
-  $padding: ''
+  $padding: '',
+  $bordeRaduis: '',
+  $size: '100%'
 };
 
-
 export default CustomImage;
-
-
-// export function CustomImage() {
-//   return (
-//     <p>Hello image</p>
-//   );
-// }
-
-// export default CustomImage;

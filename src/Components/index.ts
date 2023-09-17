@@ -1,2 +1,2 @@
 export * from './Shared';
-// export * from './HomeComponents';
+export * from './HomeComponents';
