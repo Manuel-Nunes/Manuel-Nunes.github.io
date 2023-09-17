@@ -7,7 +7,7 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "Bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -19,8 +19,21 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+
+    "baseUrl": "./src",
     "paths": {
       
+      "Screens/*": ["./Screens/*"],
+      "Screens": ["./Screens/"],
+      
+      "SharedComp/*": ["./Components/Shared/*"],
+      "SharedComp": ["./Components/Shared/"],
+      
+      "HomeComp/*": ["./Components/HomeComponents/*"],
+      "HomeComp": ["./Components/HomeComponents/"],
+
+      "Assets/*": ["./Components/assets/*"],
+      "Assets/": ["./Components/assets/"],
     }
   },
   "include": ["src"],

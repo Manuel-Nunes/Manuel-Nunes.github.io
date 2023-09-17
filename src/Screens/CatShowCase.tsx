@@ -1,9 +1,9 @@
-function CatShowShowCase(){
+export function CatShowCase(){
   return (
     <>
       <p>Hello Cat Show case</p>
     </>
-  )
+  );
 }
 
-export default CatShowShowCase;
+export default CatShowCase;
