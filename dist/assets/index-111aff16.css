@@ -1,0 +1,1 @@
+:root{--bodyBackGroundColor: #232323;--profileCardColor: #22a83f;--profileCardColor: #229da8;--profileCardColor: #5F8575;--infoBlockColor: #bec5c5;--infoBlockColor: #d9b99b}body{background-color:var(--bodyBackGroundColor)}*{margin:0;padding:0;font-family:Roboto,sans-serif;color:#fff;transition:1s}
